@@ -24,7 +24,7 @@ The network has one convolution layer and one fully connected layer. The hyperpa
 
 
 
-# System Verilog Block Diagram #
+# System Verilog Design #
 
 **Block Diagram**
 
