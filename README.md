@@ -1,7 +1,7 @@
-This is an CNN network accelerator using FPGA 
+# CNN Implementation on Pytorch and SystemVerilog # 
 
 
-# MNIST Learning using Pytorch #
+## MNIST Learning using Pytorch ##
 
 **Neural Network Architecture**
 <img width="1102" height="520" alt="image" src="https://github.com/user-attachments/assets/5d41df6c-4de0-4d94-b257-01683e638eab" />
@@ -24,7 +24,7 @@ The network has one convolution layer and one fully connected layer. The hyperpa
 
 
 
-# System Verilog Design #
+## System Verilog Design ##
 
 **Block Diagram**
 
