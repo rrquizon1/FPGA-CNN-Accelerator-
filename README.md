@@ -32,7 +32,8 @@ The network has one convolution layer and one fully connected layer. The hyperpa
 
 **Simulation waveform and output**
 
-<img width="1787" height="552" alt="image" src="https://github.com/user-attachments/assets/44bfd623-2922-4738-924b-fc197325eee9" />
+<img width="1021" height="312" alt="image" src="https://github.com/user-attachments/assets/bb8316ee-56bd-4376-a9cc-1f6cc97f1752" />
+
 
 <img width="939" height="535" alt="image" src="https://github.com/user-attachments/assets/9c3b1219-dfbe-40e3-97f0-dbd6acd5b696" />
 
