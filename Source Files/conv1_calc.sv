@@ -16,7 +16,10 @@ module conv1_calc
         output logic signed [22:0]   conv_out_1,
 		output logic					calc_ready,
         output logic                valid_out_calc,
-		input logic 					maxpool_ready
+		input logic 					maxpool_ready,
+		input  logic calc_weight_en,
+		input  logic [5:0] calc_weight_addr,
+		input  logic signed [DATA_BITS-1:0] calc_weight_in
     );
 	
 	 logic signed [DATA_BITS-1:0] weight_1 [0:FILTER_SIZE*FILTER_SIZE-1]; //weight	
@@ -40,6 +43,14 @@ module conv1_calc
 	 //expanded bias first element only
 	 assign exp_bias[0]=(bias[0][7]==1)? {15'b111111111111111,bias[BIAS_INDEX]} : {15'b000000000000000,bias[BIAS_INDEX]};
 	
+// This block makes weight_1 look like a writable memory
+    // The synthesizer can no longer assume the weights are constant
+    always @(posedge clk) begin
+        if (calc_weight_en) begin
+            weight_1[calc_weight_addr] <= calc_weight_in;
+        end
+    end
+
 
 	initial begin
         //$readmemh("conv1_weight_1_all1s.mem", weight_1);

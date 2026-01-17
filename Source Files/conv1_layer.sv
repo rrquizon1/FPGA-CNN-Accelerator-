@@ -15,7 +15,13 @@ module conv1_layer
 					output logic signed [22:0]   conv_out_1,
 					output logic signed  [22:0]   conv_out_2,
 					output logic signed [22:0]   conv_out_3,
-					output logic signed  valid_out_calc
+					output logic signed  valid_out_calc,
+					input  logic calc_weight_en,
+					input  logic [5:0] calc_weight_addr,
+					input  logic signed [DATA_BITS-1:0] calc_weight_in
+					
+					//weight signals are shorted to all conv1_calc inputs for simpler design. Ideally, different conv1_calc blocks should have different weights
+					//weight initialization are done within the block
 
 );
 
@@ -63,7 +69,10 @@ logic valid_out_calc3;
 		.conv_out_1(conv_out_1), 
 		.calc_ready(ready_calc1), 
 		.valid_out_calc(valid_out_calc1),
-		.maxpool_ready(maxpool_ready)
+		.maxpool_ready(maxpool_ready),
+		.calc_weight_en(calc_weight_en),
+		.calc_weight_addr(calc_weight_addr),
+		.calc_weight_in(calc_weight_in)
 	);
 	
 
@@ -82,7 +91,10 @@ conv1_calc #(.WIDTH(WIDTH),
 		.conv_out_1(conv_out_2), 
 		.calc_ready(ready_calc2), 
 		.valid_out_calc(valid_out_calc2),
-		.maxpool_ready(maxpool_ready)
+		.maxpool_ready(maxpool_ready),
+		.calc_weight_en(calc_weight_en),
+		.calc_weight_addr(calc_weight_addr),
+		.calc_weight_in(calc_weight_in)
 	);
 	
 conv1_calc #(.WIDTH(WIDTH),
@@ -100,7 +112,10 @@ conv1_calc #(.WIDTH(WIDTH),
 		.conv_out_1(conv_out_3), 
 		.calc_ready(ready_calc3), 
 		.valid_out_calc(valid_out_calc3),
-		.maxpool_ready(maxpool_ready)
+		.maxpool_ready(maxpool_ready),
+		.calc_weight_en(calc_weight_en),
+		.calc_weight_addr(calc_weight_addr),
+		.calc_weight_in(calc_weight_in)
 	);
 	
 	
