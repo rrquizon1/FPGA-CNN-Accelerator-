@@ -37,6 +37,8 @@ The network has one convolution layer and one fully connected layer. The hyperpa
 
 <img width="939" height="535" alt="image" src="https://github.com/user-attachments/assets/9c3b1219-dfbe-40e3-97f0-dbd6acd5b696" />
 
+
 Some notes:
 
 * This design is not tested on hardware and is implemented on goal of learning machine learning accelerators
+* This design could be optimized further 
