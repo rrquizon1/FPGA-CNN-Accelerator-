@@ -21,7 +21,11 @@ The network has one convolution layer and one fully connected layer. The hyperpa
   
 
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 ## System Verilog Design ##
@@ -38,12 +42,22 @@ The network has one convolution layer and one fully connected layer. The hyperpa
 <img width="939" height="535" alt="image" src="https://github.com/user-attachments/assets/9c3b1219-dfbe-40e3-97f0-dbd6acd5b696" />
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 **Sample Resource Utilization with Using Lattice Avant E70** 
+
 <img width="809" height="495" alt="image" src="https://github.com/user-attachments/assets/ef979a1f-4747-4383-90a3-b8de41225e84" />
 <img width="886" height="537" alt="image" src="https://github.com/user-attachments/assets/fa513715-d880-4282-be7f-3f064d480887" />
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 Some notes:
